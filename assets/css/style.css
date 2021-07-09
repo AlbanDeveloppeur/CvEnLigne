@@ -112,6 +112,10 @@
     flex-direction: row-reverse;
 }
 
+.banner header .menu .toggle {
+    display: none;
+}
+
 .banner header .menu ul{
     display: flex;
     transition: 0.5s;
@@ -121,14 +125,7 @@
     list-style: none;
     font-size: 24px;
     transition: 0.5s;
-    opacity: 0;
-    position: absolute;
-    right: 100px;
-}
-
-.banner header .menu li.active {
-    opacity: 1;
-    z-index: 10;
+    margin-right: 25px;
 }
 
 .banner header .menu .menuContent1 {
@@ -136,24 +133,28 @@
     transition-delay: 0.4s;
 }
 
-.banner header .menu .menuContent1.active {
-    right: 687px;
+.banner header .menu a:hover {
+    transition: 0.4s;
 }
 
-.banner header .menu .menuContent1.active::after {
+.banner header .menu a:hover {
+    font-weight: 500;
+}
+
+.banner header .menu .menuContent1::after {
     content: '';
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -5px;
-    left: 45px;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    bottom: 35px;
+    right: 720px;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0px;
 }
 
-.banner header .menu .menuContent1.active:hover::after { 
-    width: 86px;
-    left: 0px;
+.banner header .menu .menuContent1:hover::after { 
+    width: 88px;
+    right: 680px;
 }
 
 .banner header .menu .menuContent2 {
@@ -161,24 +162,20 @@
     transition-delay: 0.3s;
 }
 
-.banner header .menu .menuContent2.active {
-    right: 562px;
-}
-
-.banner header .menu .menuContent2.active::after {
+.banner header .menu .menuContent2::after {
     content: '';
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -5px;
-    left: 53px;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    bottom: 35px;
+    right: 599px;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0px;
 }
 
-.banner header .menu .menuContent2.active:hover::after { 
+.banner header .menu .menuContent2:hover::after { 
     width: 107px;
-    left: 0px;
+    right: 549px;
 }
 
 .banner header .menu .menuContent3 {
@@ -186,24 +183,20 @@
     transition-delay: 0.2s;
 }
 
-.banner header .menu .menuContent3.active {
-    right: 372px;
-}
-
-.banner header .menu .menuContent3.active::after {
+.banner header .menu .menuContent3::after {
     content: '';
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -5px;
-    left: 85px;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    bottom: 35px;
+    right: 436px;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0px;
 }
 
-.banner header .menu .menuContent3.active:hover::after { 
-    width: 170px;
-    left: 0px;
+.banner header .menu .menuContent3:hover::after { 
+    width: 171px;
+    right: 352px;
 }
 
 .banner header .menu .menuContent4 {
@@ -211,71 +204,45 @@
     transition-delay: 0.1s;
 }
 
-.banner header .menu .menuContent4.active {
-    right: 273px;
-}
-
-.banner header .menu .menuContent4.active::after {
+.banner header .menu .menuContent4::after {
     content: '';
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -5px;
-    left: 40px;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    bottom: 35px;
+    right: 287px;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0px;
 }
 
-.banner header .menu .menuContent4.active:hover::after { 
+.banner header .menu .menuContent4:hover::after { 
     width: 80px;
-    left: 0px;
+    right: 248px;
 }
 
 .banner header .menu .menuContent5 {
     transition: 0.5s;
 }
 
-.banner header .menu .menuContent5.active {
-    right: 155px;
-}
-
-.banner header .menu .menuContent5.active::after {
+.banner header .menu .menuContent5::after {
     content: '';
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -5px;
-    left: 49px;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    bottom: 35px;
+    right: 172px;
+    transition: width 0.3s ease 0s, right 0.3s ease 0s;
     width: 0px;
 }
 
-.banner header .menu .menuContent5.active:hover::after { 
+.banner header .menu .menuContent5:hover::after { 
     width: 98px;
-    left: 0px;
+    right: 124px;
 }
 
 .banner header .menu li a {
     text-decoration: none;
     color: #fff;
-}
-
-.banner header .toggle {
-    width: 35px;
-    height: 35px;
-    background: url(../images/toggle.png);
-    background-size: cover;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.banner header .toggle.active {
-    width: 35px;
-    height: 35px;
-    background: url(../images/close.png);
-    background-size: cover;
-    cursor: pointer;
-    filter: invert(1);
 }
 
 .banner .button {
@@ -294,7 +261,7 @@
 }
 
 .banner .button:hover {
-    background: #3f8efcbb;
+    background: #1174ff;
     transform: translateY(-5px);
 }
 
@@ -325,6 +292,9 @@
 .competences {
     background: #12222d;
     padding: 100px;
+}
+
+.competences .head {
     text-align: center;
 }
 
@@ -345,27 +315,91 @@
 
 .competences .container .competencesBx {
     position: relative;
-    background: #fff;
     width: 350px;
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #fff;
+    overflow: hidden;
     transition: 0.5s;
 }
 
-.competences .container .competencesBx:hover {
-    transform: translateY(-5px);
+.competences .container .competencesBx .imgBx {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
+    overflow: hidden;
+    transform-origin: top;
+}
+.competences .container .competencesBx:hover .imgBx {
+    transform: translateY(-80px) scale(0.85);
+}
+.competences .container .competencesBx:hover #imgBx2 {
+    transform: translateY(-70px) scale(0.85);
+}
+.competences .container .competencesBx:hover .imgBx h2 {
+    opacity: 0;
 }
 
-.competences .container .competencesBx img {
-    max-width: 100px;
+.competences .container .competencesBx .imgBx img {
+    max-width: 120px;
+    margin-bottom: 10px;
 }
 
-.competences .container .competencesBx h2 {
+.competences .container .competencesBx .imgBx h2 {
     font: 500;
     font-size: 20px;
     letter-spacing: 1px;
+    transition: 0.1s;
+}
+
+.competences .container .competencesBx .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+.competences .container .competencesBx:hover .content {
+    transform: translateY(18%);
+}
+
+.competences .container .competencesBx .content .details {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    border-top: 5px;
+    background-color: #243f52;
+    padding: 20px;
+}
+
+.competences .container .competencesBx .content .details h2 {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.competences .container .competencesBx .content .details p {
+    margin-top: 15px;
+    color: #fff;
+    width: 310px;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 25px;
 }
 
 /* Technology */
@@ -420,11 +454,19 @@
     background: #fff;
     padding: 30px 30px;
     width: 45%;
-    height: 500px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
+}
+
+.projets .container .contentBx div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .projets .container .contentBx h3 {
@@ -434,7 +476,7 @@
     color: #3f8ffc;
 }
 
-.projets .container .contentBx P {
+.projets .container .contentBx p {
     margin-top: 5px;
     text-align: justify;
     font-weight: 400;
@@ -442,7 +484,7 @@
 }
 
 .projets .container .contentBx img {
-    margin-top: 10px;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -574,65 +616,67 @@
 
     .banner .content p {
         font-size: 16px;
+        margin-top: 10px;
+        max-width: 550px;
     }
 
     .banner header .logo:after {
         width: 0;
         transition: none;
     }
-    
+ 
     .banner header .logo:hover:after { 
         width: 0;
     }
-
+    
     .banner header .toggle {
         width: 24px;
         height: 24px;
+        background: url(../images/toggle.png);
+        background-size: cover;
+        cursor: pointer;
+        z-index: 100;
+    }
+/*
+    .banner header .toggle.active {
+        width: 24px;
+        height: 24px;
+        background: url(../images/close.png);
+        background-size: cover;
+        cursor: pointer;
+        filter: invert(1);
     }
 
     .banner header .menu {
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    .banner header .menu ul {
+        display: flex;
+        flex-direction: column;
     }
     
     .banner header .menu li {
         top: 30px;
         right: 30px;
         font-size: 18px;
-    }
-
-    .banner header .menu .menuContent1.active {
-        right: 30px;
-        top: 50px;
-    }
-
-    .banner header .menu .menuContent2.active {
-        right: 30px;
-        top: 80px;
-    }
-
-    .banner header .menu .menuContent3.active {
-        right: 30px;
-        top: 110px;
+        opacity: 0;
     }
     
-    .banner header .menu .menuContent4.active {
-        right: 30px;
-        top: 140px;
+    .banner header .menu .menuContent1::after,
+    .banner header .menu .menuContent2::after,
+    .banner header .menu .menuContent3::after,
+    .banner header .menu .menuContent4::after,
+    .banner header .menu .menuContent5::after {
+        width: 0;
     }
 
-    .banner header .menu .menuContent5.active {
-        right: 30px;
-        top: 170px;
+    .banner header .menu li.active {
+        opacity: 1;
     }
-
-    .banner header .toggle.active {
-        width: 25px;
-        height: 25px;
-        transform: rotate(-90deg);
-    }
-
+*/
     /* About */
-
+/*
     .about {
         flex-direction: column;
     }
@@ -644,9 +688,9 @@
         min-height: 400px;
         text-align: center;
     }
-
+*/
     /* Services */
-
+/*
     .competences {
         padding: 50px;
     }
@@ -662,9 +706,9 @@
         min-width: 300px;
         height: 350px;
     }
-
+*/
     /* Technology */
-
+/*
     .techno {
         padding: 50px;
         padding-top: 300px;
@@ -684,9 +728,9 @@
         margin-top: 40px;
         max-width: 250px;
     }
-
+*/
     /* Client */
-
+/*
     .client {
         padding: 50px;
     }
@@ -694,9 +738,9 @@
     .client .imgBx {
         justify-content: center;
     }
-
+*/
     /* Projets */
-
+/*
     .projets {
         padding: 50px;
     }
@@ -715,9 +759,9 @@
     .projets .contentBx:last-child {
         margin-bottom: 0px;
     }
-
+*/
     /* Footer */
-
+/*
     .footer {
         padding: 20px 50px;
         flex-direction: column-reverse;
@@ -727,5 +771,5 @@
     .footer ul {
         margin-bottom: 20px;
     }
-
+*/
 }
